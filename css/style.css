@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: #F4F2F0;
+}
+
+:root {
+    --primary-color: #3B4A3C;
+    --secondary-color: #E2E1DE;
+
+}
+
+.search-box {
+    background: var(--secondary-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    width: 287px;
+}
+
+.search-box i {
+    color: #3B4A3C;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 22px;
+    padding-left: 12px;
+    color: var(--primary-color) !important;
+    width: 100%;
+}
+
+/* أزرار اللغة */
+.lang-btn {
+    background: linear-gradient(90deg, #A49375 0%, #B2A07B 24%, #C5B283 50%, #B9A67E 67%, #A49375 100%);
+    color: white;
+    font-size: 31px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+/* النقاط */
+.dots span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background: linear-gradient(90deg, #384638 -192.75%, #719078 -46.37%, #384638 100.01%);
+    border-radius: 50%;
+}
+
+/* تنسيق الروابط */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 15px;
+    transition: all 0.2s ease;
+    font-size: 31px;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 800;
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--primary-color) !important;
+    font-weight: 800;
+}
+
+.lang-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+.hero-section {
+    background-color: var(--secondary-color);
+    padding-top: 60px;
+    position: relative;
+}
+
+.hero-containt {
+    position: relative;
+}
+
+.hero-image-container {
+    border: 5px solid #32342A;
+    border-radius: 74px;
+    padding: 36px 30px 50px 30px;
+}
+
+.hero-section .hero-ramcon-logo {
+    z-index: 10000;
+    width: 100%;
+    max-width: 407px;
+    object-fit: contain;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-section .hero-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 74px;
+    height: 744px;
+    margin-bottom: -105px;
+}
+
+.btn-play-vedio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 162px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    height: 162px;
+    background: transparent;
+    color: #fff;
+    font-size: 50px;
+
+}
+
+.readmore-button {
+    padding: 23px 53px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 78px;
+    border: 3px solid white;
+    cursor: pointer;
+    margin-inline-start: 103px;
+    font-size: 32px;
+    transition: all .3s ease;
+}
+
+.readmore-button:hover {
+    transform: scalex(1.1);
+}
+
+.back {
+    position: absolute;
+    left: 50%;
+    width: 415px;
+    height: 7px;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%);
+}
+
+img.circles {
+    position: absolute;
+    right: -84px;
+    top: -161px;
+    pointer-events: none;
+}
+
+.our-journey-section {
+    background-image: linear-gradient(#223623d7,
+            #223623d8),
+        url(../assets/images/excavator.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.your-journey-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+.journy-intro {
+    color: #FFFFFF;
+}
+
+.your-journey-head .journy-readmore-btn {
+    padding: 70px 20px;
+    border-radius: 50%;
+    background-color: #F7F5F2;
+    color: var(--primary-color);
+    font-size: 32px;
+    transition: all .3s ease;
+}
+
+.your-journey-head .journy-readmore-btn:hover {
+    transform: scale(1.1);
+}
+
+.journy-intro .start-int {
+    font-size: 76px;
+}
+
+.journy-intro .sec-int {
+    font-size: 60px;
+}
+
+.journy-intro .journey-p {
+    font-size: 24px;
+}
+
+.style-journy-circle {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    position: absolute;
+    left: -23px;
+    top: 0;
+    pointer-events: none;
+}
+
+.ourjourney-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -120px;
+    position: relative;
+    z-index: 100;
+    padding-top: 50px;
+}
+
+.ourjourney-cards .journey-img-card {
+    width: 100%;
+    object-fit: cover;
+    max-width: 310px;
+    max-height: 466px;
+    border: 15px solid #F4F2F0;
+    outline: 15px solid var(--primary-color);
+}
+
+.aboutus-section {
+    background-image: url(../assets/images/layer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    /* مسافة داخلية */
+    position: relative;
+}
+
+.aboutus-contain {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-left img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.about-right {
+    position: relative;
+}
+
+.about-head {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    -webkit-text-stroke: 14px rgb(96 111 97);
+    paint-order: stroke fill;
+    margin-bottom: -32px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+
+
+.aboutus-para {
+    max-width: 810px;
+    background-color: rgb(59 78 60 / 80%);
+    ;
+    /* overlay شفاف */
+    padding: 50px 30px;
+}
+
+.aboutus-para .about-p {
+    max-width: 770px;
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 18px;
+}
+.services-section{
+    background-image: url(../assets/images/work.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
