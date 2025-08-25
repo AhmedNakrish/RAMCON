@@ -229,8 +229,8 @@ img.circles {
 }
 
 .style-journy-circle {
-    width: 280px;
-    height: 280px;
+    width: 202px;
+    height: 227px;
     object-fit: contain;
     position: absolute;
     left: -23px;
@@ -313,5 +313,5 @@ img.circles {
     background-image: url(../assets/images/work.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
