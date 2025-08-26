@@ -309,9 +309,186 @@ img.circles {
     line-height: 1.6;
     font-size: 18px;
 }
-.services-section{
-    background-image: url(../assets/images/work.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 
+.services-section {
+    background: linear-gradient(#d4c6abe1, #d4c6abe1), url(../assets/images/work.png) no-repeat center/cover;
+
+}
+
+.contain-serv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* ---------------- Left Side ---------------- */
+.left-side-serv {
+    position: relative;
+    flex: 1;
+    min-width: 350px;
+    /*background: linear-gradient(#d4c6abe1, #d4c6abe1), url(../assets/images/krak.png) no-repeat center/contain;*/
+    padding: 20px;
+    background-size: cover;
+}
+
+.left-side-serv::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(#d4c6abe1, #d4c6abe1), url(../assets/images/krak.png);
+    height: 100%;
+    width: 100%;
+    transform: scale(1.1);
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.services-header {
+    font-size: clamp(32px, 5vw, 76px);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.services-card {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.serv-name {
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.services-card-img {
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.serv-circs {
+    position: absolute;
+    z-index: -1;
+    width: 257px;
+    height: 256px;
+    object-fit: contain;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+
+.w-fit {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Execution spacing (desktop only) */
+.Execution {
+    margin-left: 225px;
+}
+
+/* ---------------- Right Side ---------------- */
+.right-side-serv {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.services-list {
+    position: relative;
+    background-color: #132013c2;
+    list-style: none;
+    padding: 40px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-weight: 400;
+    line-height: 200%;
+    right: 142px;
+    max-width: 622px;
+    max-height: 610px;
+
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .Execution {
+        margin-left: 100px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .contain-serv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Execution {
+        margin-left: 0;
+    }
+
+    .services {
+        gap: 40px;
+    }
+
+    .right-side-serv {
+        max-width: 100%;
+    }
+
+    .services-header {
+        text-align: center;
+    }
+
+    .serv-name {
+        text-align: center;
+    }
+}
+
+.arrow-path {
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 4;
+    fill: none;
+    z-index: 2;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    stroke-dasharray: 10, 5;
+    animation: dash 3s linear infinite;
+}
+
+.serv-name-curved {
+    font-size: 24px;
+    font-weight: 800;
+    fill: #2d4a2d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -30;
+    }
+}
+
+/* Enhanced arrow markers */
+#arrowhead {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
 }

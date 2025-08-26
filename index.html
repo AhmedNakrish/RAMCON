@@ -10,6 +10,7 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
@@ -55,7 +56,7 @@
         </div>
     </nav>
     <section class="hero-section " ld="hero-section">
-                <img class="circles" src="./assets/images/circles.png" alt="">
+        <img class="circles" src="./assets/images/circles.png" alt="">
         <div class="container">
             <div class="hero-containt">
                 <button class="btn-play-vedio"><i class="fa-solid fa-play"></i></button>
@@ -73,7 +74,7 @@
         <div class="container">
             <div class="your-journey-head">
                 <div class="journy-intro">
-                    <h2 class="start-int" >Start your Journey</h2>
+                    <h2 class="start-int">Start your Journey</h2>
                     <h3 class="sec-int">To the Perfect Property</h3>
                     <p class="journey-p">Offering Reliable and Efficient Contracting Solution</p>
                 </div>
@@ -85,22 +86,22 @@
                 <div class="row">
                     <div class="ourjourney-cards">
                         <div class="col-m-4">
-                        <div class="journey-card">
-                            <img src="./assets/images/digging.png" alt="digging" class="journey-img-card">
+                            <div class="journey-card">
+                                <img src="./assets/images/digging.png" alt="digging" class="journey-img-card">
+                            </div>
+                        </div>
+                        <div class="col-m-4">
+                            <div class="journey-card">
+                                <img src="./assets/images/diggingtool.png" alt="diggingtool" class="journey-img-card">
+                            </div>
+                        </div>
+                        <div class="col-m-4">
+                            <div class="journey-card">
+                                <img src="./assets/images/engineer.png" alt="eng" class="journey-img-card">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-m-4">
-                        <div class="journey-card">
-                            <img src="./assets/images/diggingtool.png" alt="diggingtool" class="journey-img-card">
-                        </div>
-                    </div>
-                    <div class="col-m-4">
-                        <div class="journey-card">
-                            <img src="./assets/images/engineer.png" alt="eng" class="journey-img-card">
-                        </div>
-                    </div>
-                    </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -114,27 +115,98 @@
                 <div class="about-right">
                     <h2 class="about-head">About US</h2>
                     <div class="aboutus-para">
-                        <p class="about-p">A multidisciplinary consulting the institution established by national cadres in the service of development projects
-                         in the Kingdom of Saudi Arabia in the Arab Gulf region and the Arab States, through the formation and strengthening 
-                         of this institution technical cadres qualifed expertise in the areas of various engineering. As well as strengthening 
-                         the capacity of the company in alliance with a group of companies and institutions inside and outside the kingdom .</p>
-                    </div>                    
+                        <p class="about-p">A multidisciplinary consulting the institution established by national cadres
+                            in the service of development projects
+                            in the Kingdom of Saudi Arabia in the Arab Gulf region and the Arab States, through the
+                            formation and strengthening
+                            of this institution technical cadres qualifed expertise in the areas of various engineering.
+                            As well as strengthening
+                            the capacity of the company in alliance with a group of companies and institutions inside
+                            and outside the kingdom .</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="services-section">
-        <div class="container">
-             <div class="left-side-serv">
-            <h2 class="services-header">Our Service</h2>
+  <div class="contain-serv">
+    
+    <!-- Left Side -->
+    <div class="left-side-serv">
+      <div class="container">
+        <h2 class="services-header">Our Service</h2>
+        
+        <div class="services">
+          <!-- Planning -->
+          <div class="planning services-card"  >
+            <svg class="curved-text" width="300" height="100">
+                <defs>
+                    <path id="planning-curve" d="M 50,100 Q 200,20 250,120" />
+                </defs>
+                <text class="serv-name-curved">
+                    <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
+                        Planning
+                    </textPath>
+                </text>
+            </svg>
+            <div class="position-relative w-fit">
+              <img src="./assets/images/Rectangle (2).png" alt="Planning" class="services-card-img">
+              <img src="./assets/images/circs.png" alt="" class="serv-circs">
+            </div>
+          </div>
+          
+          <!-- Execution -->
+          <div class="Execution services-card" >
+            <svg class="curved-text" width="300" height="100" ">
+                                <defs>
+                                    <path id="execution-curve" d="M 50,100 Q 200,20 250,120"></path>
+                                </defs>
+                                <text class="serv-name-curved">
+                                    <textPath href="#execution-curve" startOffset="50%" text-anchor="middle">
+                                        Execution
+                                    </textPath>
+                                </text>
+                            </svg>
+            <div class="position-relative w-fit">
+              <img src="./assets/images/Rectangle.png" alt="Execution" class="services-card-img">
+              <img src="./assets/images/circs.png" alt="" class="serv-circs">
+            </div>
+          </div>
+          
+          <!-- Delivery -->
+          <div class="Delivery-to-customer services-card"  >
+             <svg class="curved-text" width="400" height="70" ">
+                                <defs>
+                                    <path id="delivery-curve" d="M 50,50 Q 200,20 350,50"></path>
+                                </defs>
+                                <text class="serv-name-curved">
+                                    <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
+                                        Delivery to Customer
+                                    </textPath>
+                                </text>
+                            </svg>
+            <div class="position-relative w-fit">
+              <img src="./assets/images/Rectangle (1).png" alt="Delivery to customer" class="services-card-img">
+              <img src="./assets/images/circs.png" alt="" class="serv-circs">
+            </div>
+          </div>
         </div>
-        <div class="right-side-serv"></div>
-        </div>
-       
-
-
-    </section>
-
+      </div>
+    </div>
+    
+    <!-- Right Side -->
+    <div class="right-side-serv"  >
+      <ul class="services-list">
+        <li >Implementation of all civil acts, architectural, and electrical</li>
+        <li>Project Management Concrete and Steel Buildings Design</li>
+        <li >Implementation of infrastructure projects.</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+    <script src="./JS/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
