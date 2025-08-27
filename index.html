@@ -137,6 +137,21 @@
         <h2 class="services-header">Our Service</h2>
         
         <div class="services">
+            <svg style="  width: 100%; height: 100%; z-index: 2; pointer-events: none;" class="arrows">
+                            <!-- Arrow from Planning to Execution -->
+                            <path d="M 250 90 Q 400 90 250 310" class="arrow-path" marker-end="url(#arrowhead)"></path>
+                            <!-- Arrow from Execution to Delivery -->
+                            <path d="M 380 320 Q 320 450 180 460" class="arrow-path" marker-end="url(#arrowhead)"></path>
+                            <!-- Arrow from Delivery back to Planning -->
+                            <!--path d="M 150 400 Q 100 250 200 140" class="arrow-path" marker-end="url(#arrowhead)"></!--path-->
+                            
+                            <!-- Enhanced arrow markers -->
+                            <defs>
+                                <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
+                                    <polygon points="0 0, 12 5, 0 10" fill="rgba(255, 255, 255, 0.9)"></polygon>
+                                </marker>
+                            </defs>
+                        </svg>
           <!-- Planning -->
           <div class="planning services-card"  >
             <svg class="curved-text" width="300" height="100">
@@ -181,7 +196,7 @@
                                 </defs>
                                 <text class="serv-name-curved">
                                     <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
-                                        Delivery to Customer
+                                         Delivery to Customer
                                     </textPath>
                                 </text>
                             </svg>
@@ -205,6 +220,69 @@
     
   </div>
 </section>
+<section class="projects-section">
+        <div class="container">
+            <div class="header-section">
+                <div class="projects-header">
+                    <div class="proj-tit"><h2 class="projects-title">Our Projects</h2></div>
+                    
+                    <div class="tabs-container">
+                    <div class="tab-item active" data-category="qualita">
+                        <div class="tab-circle">
+                            <span class="tab-text">Qualita</span>
+                        </div>
+                    </div>
+                    <div class="tab-item" data-category="now">
+                        <div class="tab-circle">
+                            <span class="tab-text">Now</span>
+                        </div>
+                    </div>
+                    <div class="tab-item" data-category="future">
+                        <div class="tab-circle">
+                            <span class="tab-text">Future</span>
+                        </div>
+                    </div>
+                    <div class="tab-item" data-category="complete">
+                        <div class="tab-circle">
+                            <span class="tab-text">Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+                </div>
+                <p class="project-demo-text"> <strong>Demo Name</strong> Of This Project is Written In This Space In Two Lines</p>
+                
+                
+
+            <div class="projects-grid" data-category="qualita" id="projectsGrid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+    <section class="ourclients-section">
+        <div class="ourclients-header">
+            <h2 class="clients-title">Our Clients</h2>
+        </div>
+        <div class="our-clients">
+            <div class="high-side">
+                <img src="./assets/images/image 3 (1).png" alt="">
+                <img src="./assets/images/image 5.png" alt="">
+                <img src="./assets/images/image 7.png" alt="">
+                <img src="./assets/images/image 8.png" alt="">
+                <img src="./assets/images/image 9.png" alt="">
+                <img src="./assets/images/image 9.png" alt="">
+            </div>
+            <div class="bottom-side">
+                <img src="./assets/images/image 3 (1).png" alt="">
+                <img src="./assets/images/image 5.png" alt="">
+                <img src="./assets/images/image 7.png" alt="">
+                <img src="./assets/images/image 8.png" alt="">
+                <img src="./assets/images/image 9.png" alt="">
+                <img src="./assets/images/image 9.png" alt="">
+            </div>
+        </div>
+    </section>
     <script src="./JS/index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
