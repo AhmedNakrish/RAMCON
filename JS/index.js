@@ -189,3 +189,103 @@ const projectsData = {
                 });
             });
         });
+     
+        const topSwiper = new Swiper('.high-side ', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                reverseDirection: false,
+            },
+            navigation: {
+                nextEl: '.high-side .swiper-button-next',
+                prevEl: '.high-side .swiper-button-prev',
+            },
+            pagination: {
+                el: '.high-side .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 60
+                }
+            },
+            speed: 1000,
+            effect: 'slide',
+        });
+        // Initialize bottom swiper (moves left)
+        const bottomSwiper = new Swiper('.bottom-side  ', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                reverseDirection: true,
+            },
+            navigation: {
+                nextEl: '.bottom-side .swiper-button-next',
+                prevEl: '.bottom-side .swiper-button-prev',
+            },
+            pagination: {
+                el: '.bottom-side .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 60
+                }
+            },
+            speed: 1000,
+            effect: 'slide',
+        });
+
+        // Pause autoplay on hover
+        const swiperContainers = document.querySelectorAll('.swiper');
+        swiperContainers.forEach((container, index) => {
+            const swiper = index === 0 ? topSwiper : bottomSwiper;
+            
+            container.addEventListener('mouseenter', () => {
+                swiper.autoplay.stop();
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                swiper.autoplay.start();
+            });
+        });        
