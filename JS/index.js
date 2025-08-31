@@ -126,7 +126,8 @@ const projectsData = {
                     <div class="project-circle-container">
                         <div class="project-outer-circles"></div>
                         <div class="project-inner-circle">
-                            Read More
+                            <p> Read More</p>
+                           <i class="fa-solid fa-arrow-up"></i>
                         </div>
                         <div class="curved-text-container">
                             <svg width="360" height="360" style="overflow: visible;">
