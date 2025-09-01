@@ -44,7 +44,7 @@
                     <a class="nav-link active" href="#hero-section">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT US</a>
+                    <a class="nav-link " href="#">ABOUT US</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">SERVICES</a>
@@ -81,6 +81,7 @@
                     <p class="journey-p">Offering Reliable and Efficient Contracting Solution</p>
                 </div>
                 <div class="journy-btn">
+
                     <button class="journy-readmore-btn">Read<strong>More</strong></button>
                 </div>
             </div>
@@ -131,98 +132,90 @@
         </div>
     </section>
     <section class="services-section">
-        <div class="contain-serv">
+        <div class="container">
+            <div class="row">
 
-            <!-- Left Side -->
-            <div class="left-side-serv">
-                <div class="container">
-                    <h2 class="services-header">Our Service</h2>
+                <!-- Left Side -->
+                <div class="col-md-7">
+                    <div class="left-side-serv">
 
-                    <div class="services">
-                        <svg style="  width: 100%; height: 100%; z-index: 2; pointer-events: none;" class="arrows">
-                            <!-- Arrow from Planning to Execution -->
-                            <path d="M 250 90 Q 400 90 250 310" class="arrow-path" marker-end="url(#arrowhead)"></path>
-                            <!-- Arrow from Execution to Delivery -->
-                            <path d="M 380 320 Q 320 450 180 460" class="arrow-path" marker-end="url(#arrowhead)">
-                            </path>
-                            <!-- Arrow from Delivery back to Planning -->
-                            <!--path d="M 150 400 Q 100 250 200 140" class="arrow-path" marker-end="url(#arrowhead)"></!--path-->
+                        <div class="container">
+                            <h2 class="services-header">Our Service</h2>
 
-                            <!-- Enhanced arrow markers -->
-                            <defs>
-                                <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="10" refY="5"
-                                    orient="auto">
-                                    <polygon points="0 0, 12 5, 0 10" fill="rgba(255, 255, 255, 0.9)"></polygon>
-                                </marker>
-                            </defs>
-                        </svg>
-                        <!-- Planning -->
-                        <div class="planning services-card">
-                            <svg class="curved-text" width="300" height="100">
-                                <defs>
-                                    <path id="planning-curve" d="M 50,100 Q 200,20 250,120" />
-                                </defs>
-                                <text class="serv-name-curved">
-                                    <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
-                                        Planning
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="position-relative w-fit">
-                                <img src="./assets/images/Rectangle (2).png" alt="Planning" class="services-card-img">
-                                <img src="./assets/images/circs.png" alt="" class="serv-circs">
-                            </div>
-                        </div>
+                            <div class="services">
+                                <!-- Planning -->
+                                <div class="planning services-card">
+                                    <svg class="curved-text" width="300" height="100">
+                                        <defs>
+                                            <path id="planning-curve" d="M 50,100 Q 200,20 250,120" />
+                                        </defs>
+                                        <text class="serv-name-curved">
+                                            <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
+                                                Planning
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div class="position-relative w-fit">
+                                        <img src="./assets/images/Rectangle (2).png" alt="Planning"
+                                            class="services-card-img">
+                                        <img src="./assets/images/circs.png" alt="" class="serv-circs">
+                                    </div>
+                                </div>
 
-                        <!-- Execution -->
-                        <div class="Execution services-card">
-                            <svg class="curved-text" width="300" height="100" ">
+                                <!-- Execution -->
+                                <div class="Execution services-card">
+                                    <svg class="curved-text" width="300" height="100" ">
                                 <defs>
                                     <path id=" execution-curve" d="M 50,100 Q 200,20 250,120"></path>
-                                </defs>
-                                <text class="serv-name-curved">
-                                    <textPath href="#execution-curve" startOffset="50%" text-anchor="middle">
-                                        Execution
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="position-relative w-fit">
-                                <img src="./assets/images/Rectangle.png" alt="Execution" class="services-card-img">
-                                <img src="./assets/images/circs.png" alt="" class="serv-circs">
-                            </div>
-                        </div>
+                                        </defs>
+                                        <text class="serv-name-curved">
+                                            <textPath href="#execution-curve" startOffset="50%" text-anchor="middle">
+                                                Execution
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div class="position-relative w-fit">
+                                        <img src="./assets/images/Rectangle.png" alt="Execution"
+                                            class="services-card-img">
+                                        <img src="./assets/images/circs.png" alt="" class="serv-circs">
+                                    </div>
+                                </div>
 
-                        <!-- Delivery -->
-                        <div class="Delivery-to-customer services-card">
-                            <svg class="curved-text" width="400" height="70" ">
+                                <!-- Delivery -->
+                                <div class="Delivery-to-customer services-card">
+                                    <svg class="curved-text" width="400" height="70" ">
                                 <defs>
                                     <path id=" delivery-curve" d="M 50,50 Q 200,20 350,50"></path>
-                                </defs>
-                                <text class="serv-name-curved">
-                                    <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
-                                        Delivery to Customer
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <div class="position-relative w-fit">
-                                <img src="./assets/images/Rectangle (1).png" alt="Delivery to customer"
-                                    class="services-card-img">
-                                <img src="./assets/images/circs.png" alt="" class="serv-circs">
+                                        </defs>
+                                        <text class="serv-name-curved">
+                                            <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
+                                                Delivery to Customer
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div class="position-relative w-fit">
+                                        <img src="./assets/images/Rectangle (1).png" alt="Delivery to customer"
+                                            class="services-card-img">
+                                        <img src="./assets/images/circs.png" alt="" class="serv-circs">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right Side -->
-            <div class="right-side-serv">
-                <ul class="services-list">
-                    <li>Implementation of all civil acts, architectural, and electrical</li>
-                    <li>Project Management Concrete and Steel Buildings Design</li>
-                    <li>Implementation of infrastructure projects.</li>
-                </ul>
-            </div>
+                <!-- Right Side -->
+                <div class="col-md-5">
+                    <div class="right-side-serv">
+                        <ul class="services-list">
+                            <li>Implementation of all civil acts, architectural, and electrical</li>
+                            <li>Project Management Concrete and Steel Buildings Design</li>
+                            <li>Implementation of infrastructure projects.</li>
+                        </ul>
+                    </div>
+                </div>
 
+            </div>
         </div>
     </section>
     <section class="projects-section">
@@ -267,7 +260,125 @@
                 <!-- Projects will be dynamically loaded here -->
             </div>
         </div>
+        <!-- Dialog Overlay -->
+        <div class="dialog-overlay" id="dialogOverlay">
+            <div class="dialog">
+
+
+                <div class="dialod-contain">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="dialog-header">
+
+                                <button class="dialog-back-btn" id="closeDialog">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back
+                                </button>
+                            </div>
+                            <div class="dialog-content">
+                                <h2 class="dialog-title" id="dialogTitle">عنوان المشروع</h2>
+
+                                <div class="dialog-info-grid">
+                                    <div class="dialog-info-item">
+                                        <div class="dialog-info-icon client">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="dialog-info-text">SAUDI ARAMCO</div>
+                                    </div>
+
+                                    <div class="dialog-info-item">
+                                        <div class="dialog-info-icon location">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                        <div class="dialog-info-text">HADRDAH & HAWIYAH (KSA)</div>
+                                    </div>
+
+                                    <div class="dialog-info-item">
+                                        <div class="dialog-info-icon type">
+                                            <i class="fa-solid fa-bookmark"></i>
+                                        </div>
+                                        <div class="dialog-info-text">SITE DEVELOPMENT & Roads</div>
+                                    </div>
+
+                                    <div class="dialog-info-item">
+                                        <div class="dialog-info-icon value">
+                                            <i class="fa-solid fa-file"></i>
+                                        </div>
+                                        <div class="dialog-info-text">LUMP-SUM</div>
+                                    </div>
+
+                                    <div class="dialog-info-item">
+                                        <div class="dialog-info-icon scope">
+                                            <i class="fa-solid fa-flag"></i>
+                                        </div>
+                                        <div class="dialog-info-text">SITE GRADING, ROAD WORKS, CULVERTS</div>
+                                    </div>
+
+                                    <div class="dialog-info-item">
+                                        <div class="dialog-info-icon date">
+                                            <i class="fa-solid fa-clock"></i>
+                                        </div>
+                                        <div class="dialog-info-text">DEC, 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="dialog-carousel">
+                                <div class="dialog-carousel-container">
+                                    <div class="dialog-carousel-track" id="carouselTrack">
+                                        <div class="dialog-carousel-slide">
+                                            <img src="./assets/images/ramcon-eng.png" alt="صورة المشروع 1">
+                                        </div>
+                                        <div class="dialog-carousel-slide">
+                                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=400&fit=crop"
+                                                alt="صورة المشروع 2">
+                                        </div>
+                                        <div class="dialog-carousel-slide">
+                                            <img src="./assets/images/ramcon-eng.png" alt="صورة المشروع 3">
+                                        </div>
+                                        <div class="dialog-carousel-slide">
+                                            <img src="./assets/images/ramcon-eng.png" alt="صورة المشروع 4">
+                                        </div>
+                                        <div class="dialog-carousel-slide">
+                                            <img src="./assets/images/ramcon-eng.png" alt="صورة المشروع 5">
+                                        </div>
+                                        <div class="dialog-carousel-slide">
+                                            <img src="./assets/images/ramcon-eng.png" alt="صورة المشروع 6">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-arrow prev" id="prevSlide">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                    <button class="carousel-arrow next" id="nextSlide">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+                                </div>
+
+                                <div class="carousel-nav" id="carouselNav">
+                                    <span class="carousel-dot active" data-slide="0"></span>
+                                    <span class="carousel-dot" data-slide="1"></span>
+                                    <span class="carousel-dot" data-slide="2"></span>
+                                    <span class="carousel-dot" data-slide="3"></span>
+                                    <span class="carousel-dot" data-slide="4"></span>
+                                    <span class="carousel-dot" data-slide="5"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+
     </section>
+
+
+
+
     <section class="ourclients-section">
         <div class="ourclients-header">
             <h2 class="clients-title">Our Clients</h2>
@@ -395,42 +506,60 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            
-                                <div class="contact-info">
+
+                            <div class="contact-info">
                                 <div class="contact-item">
-                                    <div class="contact-icon phone-icon">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
+                                    <a href="#">
+                                        <div class="contact-icon phone-icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                    </a>
                                     <div class="contact-details">
-                                        <div class="phone-number">+966 55 804 1659</div>
-                                        <div class="phone-number">+966 56 552 6602</div>
+                                        <div class="phone-number"><a href="#" class="text-white">+966 55 804 1659</a>
+                                        </div>
+                                        <div class="phone-number"><a href="#" class="text-white">+966 56 552 6602</a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="contact-item">
+                                    <a href="#">
+                                        <div class="contact-icon email-icon">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                    </a>
+
+                                    <div class="contact-details">
+                                        <div class="email text-white"><a href="#" class="text-white"> info@rmcon.sa</a>
+                                        </div>
+                                        <div class="email text-white"><a href="#"
+                                                class="text-white">engadel@rmcon.sa</a></div>
+                                        <div class="email text-white"><a href="#"
+                                                class="text-white">enghaya@rmcon.sa</a></div>
                                     </div>
                                 </div>
 
                                 <div class="contact-item">
-                                    <div class="contact-icon email-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <div class="email">info@rmcon.sa</div>
-                                        <div class="email">engadel@rmcon.sa</div>
-                                        <div class="email">enghaya@rmcon.sa</div>
-                                    </div>
-                                </div>
+                                    <a href="#">
+                                        <div class="contact-icon location-icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                    </a>
 
-                                <div class="contact-item">
-                                    <div class="contact-icon location-icon">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                    </div>
                                     <div class="contact-details">
-                                        <div class="address-ar">الرياض - طريق أنس بن مالك حي الملقا</div>
-                                        <div class="address-ar">ص.ب 31666 الرمز البريدي 13524</div>
-                                        <div class="address-en">Riyadh - Anas Ibn Malik ST, Al Maliqa District<br>RD.
-                                            Box 31666, Zip Code 13524</div>
+                                        <div class="address-ar"><a href="#" class="text-white">الرياض - طريق انس بن مالك
+                                                حي الملقا
+                                                ص.ب 31 666. الرمز البريدي 13524</a></div>
+
+                                        <div class="address-en"> <a href="#" class="text-white">Riyadh - Anas Ibn Malik
+                                                ST, Al Maliqa District<br>RD.
+                                                Box 31666, Zip Code 13524</a> </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 

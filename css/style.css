@@ -204,12 +204,27 @@ img.circles {
 }
 
 .your-journey-head .journy-readmore-btn {
+    position:relative;
     padding: 70px 20px;
     border-radius: 50%;
     background-color: #F7F5F2;
     color: var(--primary-color);
     font-size: 32px;
     transition: all .3s ease;
+    position:relative; 
+    border:none; 
+
+}
+.your-journey-head .journy-readmore-btn::before {
+    content: '';
+    background-image: url(../assets/images/circles2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 243px;
+    height: 263px;
+    top: -38px;
+    left: -13px;
 }
 
 .your-journey-head .journy-readmore-btn:hover {
@@ -315,17 +330,12 @@ img.circles {
 
 }
 
-.contain-serv {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
+
+
 
 /* ---------------- Left Side ---------------- */
 .left-side-serv {
     position: relative;
-    flex: 1;
     min-width: 350px;
     /*background: linear-gradient(#d4c6abe1, #d4c6abe1), url(../assets/images/krak.png) no-repeat center/contain;*/
     padding: 20px;
@@ -404,7 +414,6 @@ img.circles {
 
 /* ---------------- Right Side ---------------- */
 .right-side-serv {
-    flex: 1;
     min-width: 300px;
     padding: 40px;
     display: flex;
@@ -647,19 +656,18 @@ img.circles {
     font-size: 18px;
     /*box-shadow: 0 8px 30px rgba(45, 74, 45, 0.3);*/
 }
-.your-journey-head .journy-readmore-btn::before {
-    content: '';
-    position: absolute;
-    background-image: url(../);
-}
+
 .read-arrow{
-   color:white;
+   transform: rotate(45deg);
   
 }
 .project-inner-circle:hover {
     background: #1a2e1a;
     transform: scale(1.05);
     box-shadow: 0 12px 40px rgba(45, 74, 45, 0.4);
+}
+a{
+    text-decoration: none !important;
 }
 
 /*.project-inner-circle::after {
@@ -675,8 +683,9 @@ img.circles {
 
 .curved-text-container {
     position: absolute;
-    inset: -40px;
     pointer-events: none;
+    top:-48px;
+    left:28px;
 }
 
 .curved-text {
@@ -1141,10 +1150,7 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .contain-serv {
-        flex-direction: column;
-        align-items: center;
-    }
+    
 
     .Execution {
         margin-left: 0;
@@ -1194,4 +1200,253 @@ footer {
 /* Enhanced arrow markers */
 #arrowhead {
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/*  */
+
+
+
+
+  
+ 
+  
+ 
+      
+     
+ 
+        /* Dialog Styles */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .dialog-overlay.active {
+            display: flex;
+        }
+
+.dialog {
+    background: #F4F2F0;
+    width: 90%;
+    max-width: 1440px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+        .dialod-contain {
+            display: flex;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dialog-header {
+            position: relative;
+            height: 70px;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+        }
+
+        .dialog-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dialog-back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            
+            border: none;
+           
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #333;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .dialog-back-btn:hover {
+            
+            transform: scale(1.1);
+        }
+
+        .dialog-content {
+            padding: 30px;
+        }
+
+        .dialog-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .dialog-info-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .dialog-info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            /*background: #f8f9fa;*/
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .dialog-info-item:hover {
+            /*background: #e9ecef;*/
+            transform: translateX(5px);
+        }
+
+        .dialog-info-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+
+        .dialog-info-icon{
+           background: linear-gradient(90deg, #A49375 0.02%, #B0A182 26.02%, #D1C4A3 73.01%, #E5DBB8 100%);
+
+        }
+
+        
+
+        .dialog-info-text {
+            flex: 1;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .dialog-carousel {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .dialog-carousel-container {
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .dialog-carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .dialog-carousel-slide {
+            min-width: 100%;
+            /*height: 250px;*/
+             min-height: 700px;
+        }
+
+        .dialog-carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background:transparent;
+            border:1px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(90deg, #A49375 0.02%, #B0A182 26.02%, #D1C4A3 73.01%, #E5DBB8 100%);;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color:var(--primary-color);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background: linear-gradient(90deg, #A49375 0.02%, #B0A182 26.02%, #D1C4A3 73.01%, #E5DBB8 100%);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-arrow.prev {
+            right: 10px;
+        }
+
+        .carousel-arrow.next {
+            left: 10px;
+        }
+        .dialod-contain {
+            display: flex;
+            justify-content: space-between;
+}
+
+.Execution.services-card {
+    margin-top: -181px;
+}
+
+.Delivery-to-customer.services-card {
+    margin-top: -134px;
+}.planning.services-card {
+    margin-left: -300px;
+}
+
+
+
+.Delivery-to-customer.services-card {
+    margin-left: -300px;
 }
