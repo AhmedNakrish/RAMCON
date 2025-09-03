@@ -16,7 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <title>Ramcon-الرائد للمباني</title>
+    <title>Ramcon</title>
 </head>
 
 <body>
@@ -44,34 +44,42 @@
                     <a class="nav-link active" href="#hero-section">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">ABOUT US</a>
+                    <a class="nav-link " href="#aboutus-section">ABOUT US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SERVICES</a>
+                    <a class="nav-link" href="#services-section">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT</a>
+                    <a class="nav-link" href="#footer">CONTACT</a>
                 </li>
             </ul>
 
 
         </div>
     </nav>
+    <!--sidebar nav-->
+    
     <section class="hero-section " ld="hero-section">
         <img class="circles" src="./assets/images/circles.png" alt="">
         <div class="container">
             <div class="hero-containt">
-                <button class="btn-play-vedio"><i class="fa-solid fa-play"></i></button>
-                <div class="back"></div>
-                <img src="./assets/images/ramcon.svg" alt="Ramcon-الرائد" class="hero-ramcon-logo">
+                <!--button class="btn-play-vedio"><i class="fa-solid fa-play"></i></button-->
+                <div class="back" data--h-bstatus="0OBSERVED"></div>
+                <img src="./assets/images/ramcon.svg" alt="Ramcon-الرائد" class="hero-ramcon-logo hb-hide-temp"
+                    data--h-bstatus="4PROCESSING">
                 <div class="hero-image-container">
-                    <img src="./assets/images/constructions.png" alt="constructions" class="hero-img">
+                    <video class="ramcon-video" autoplay loop muted playsinline>
+                        <source src="./assets/images/RMCON-1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
+
+
                 <button class="readmore-button">Read <strong>More</strong></button>
             </div>
         </div>
     </section>
-    <section class="our-journey-section">
+    <section class="our-journey-section" id="our-journey-section">
         <img class="style-journy-circle" src="./assets/images/Group 8.png">
         <div class="container">
             <div class="your-journey-head">
@@ -131,7 +139,7 @@
             </div>
         </div>
     </section>
-    <section class="services-section">
+    <section class="services-section" id="services-section">
         <div class="container">
             <div class="row">
 
@@ -139,70 +147,70 @@
                 <div class="col-md-7">
                     <div class="left-side-serv">
 
-                        <div class="container">
-                            <h2 class="services-header">Our Service</h2>
+                        <h2 class="services-header">Our Service</h2>
 
-                            <div class="services">
-                                <!-- Planning -->
-                                <div class="planning services-card">
-                                    <svg class="curved-text" width="300" height="100">
-                                        <defs>
-                                            <path id="planning-curve" d="M 50,100 Q 200,20 250,120" />
-                                        </defs>
-                                        <text class="serv-name-curved">
-                                            <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
-                                                Planning
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                    <div class="position-relative w-fit">
-                                        <img src="./assets/images/Rectangle (2).png" alt="Planning"
-                                            class="services-card-img">
-                                        <img src="./assets/images/circs.png" alt="" class="serv-circs">
-                                    </div>
-                                    <img src="./assets/images/arrows.png" alt="" class="arrow-serv1">
+
+                        <div class="services">
+
+                            <!-- Planning -->
+                            <div class="planning services-card">
+                                <svg class="curved-text" width="300" height="100">
+                                    <defs>
+                                        <path id="planning-curve" d="M 50,100 Q 200,20 250,120" />
+                                    </defs>
+                                    <text class="serv-name-curved">
+                                        <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
+                                            Planning
+                                        </textPath>
+                                    </text>
+                                </svg>
+                                <div class="position-relative w-fit">
+                                    <img src="./assets/images/Rectangle (2).png" alt="Planning"
+                                        class="services-card-img">
+                                    <img src="./assets/images/circs.png" alt="" class="serv-circs">
                                 </div>
+                                <img src="./assets/images/arrows.png" alt="" class="arrow-serv1">
+                            </div>
 
-                                <!-- Execution -->
-                                <div class="Execution services-card">
-                                    <svg class="curved-text" width="300" height="100" ">
+                            <!-- Execution -->
+                            <div class="Execution services-card">
+                                <svg class="curved-text" width="300" height="100" ">
                                 <defs>
                                     <path id=" execution-curve" d="M 50,100 Q 200,20 250,120"></path>
-                                        </defs>
-                                        <text class="serv-name-curved">
-                                            <textPath href="#execution-curve" startOffset="50%" text-anchor="middle">
-                                                Execution
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                    <div class="position-relative w-fit">
-                                        <img src="./assets/images/Rectangle.png" alt="Execution"
-                                            class="services-card-img">
-                                        <img src="./assets/images/circs.png" alt="" class="serv-circs">
-                                    </div>
-                                    <img src="./assets/images/arrows.png" alt="" class="arrow-serv2">
+                                    </defs>
+                                    <text class="serv-name-curved">
+                                        <textPath href="#execution-curve" startOffset="50%" text-anchor="middle">
+                                            Execution
+                                        </textPath>
+                                    </text>
+                                </svg>
+                                <div class="position-relative w-fit">
+                                    <img src="./assets/images/Rectangle.png" alt="Execution" class="services-card-img">
+                                    <img src="./assets/images/circs.png" alt="" class="serv-circs">
                                 </div>
+                                <img src="./assets/images/arrows.png" alt="" class="arrow-serv2">
+                            </div>
 
-                                <!-- Delivery -->
-                                <div class="Delivery-to-customer services-card">
-                                    <svg class="curved-text" width="400" height="70" ">
+                            <!-- Delivery -->
+                            <div class="Delivery-to-customer services-card">
+                                <svg class="curved-text" width="400" height="70" ">
                                 <defs>
                                     <path id=" delivery-curve" d="M 50,50 Q 200,20 350,50"></path>
-                                        </defs>
-                                        <text class="serv-name-curved">
-                                            <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
-                                                Delivery to Customer
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                    <div class="position-relative w-fit">
-                                        <img src="./assets/images/Rectangle (1).png" alt="Delivery to customer"
-                                            class="services-card-img">
-                                        <img src="./assets/images/circs.png" alt="" class="serv-circs">
-                                    </div>
+                                    </defs>
+                                    <text class="serv-name-curved">
+                                        <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
+                                            Delivery to Customer
+                                        </textPath>
+                                    </text>
+                                </svg>
+                                <div class="position-relative w-fit">
+                                    <img src="./assets/images/Rectangle (1).png" alt="Delivery to customer"
+                                        class="services-card-img">
+                                    <img src="./assets/images/circs.png" alt="" class="serv-circs">
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -220,7 +228,7 @@
             </div>
         </div>
     </section>
-    <section class="projects-section">
+    <section class="projects-section" id="projects-section">
         <div class="container">
             <div class="header-section">
                 <div class="projects-header">
@@ -388,14 +396,15 @@
 
 
 
-    <section class="ourclients-section">
+    <section class="ourclients-section" id="ourclients-section">
         <div class="ourclients-header">
             <h2 class="clients-title">Our Clients</h2>
+            <div class="client-line"></div>
         </div>
         <div class="container">
             <div class="our-clients">
                 <!-- High Side Swiper -->
-                <div class="swiper high-side">
+                <!--div class="swiper high-side">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="./assets/images/image 3 (1).png" alt="Client 1" class="client-logo">
@@ -421,7 +430,7 @@
                     <!--div class="swiper-button-prev"></!--div-->
                     <!-- Pagination -->
                     <!--div class="swiper-pagination"></!--div-->
-                </div>
+                <!--/div-->
 
                 <div class="swiper bottom-side">
                     <div class="swiper-wrapper">
@@ -452,7 +461,7 @@
             </div>
         </div>
     </section>
-    <section class="subscribenom-section">
+    <section class="subscribenom-section" id="subscribenom-section">
         <div class="container">
             <div class="subscribe">
                 <div class="sub-left-side">
@@ -466,8 +475,8 @@
                         </div>
                         <div class="sub-download">
                             <button class="download-btn">Download Profile RMCON
-                                <svg  viewBox="0 0 51 60" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="download-icon-btn">
+                                <svg viewBox="0 0 51 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    class="download-icon-btn">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M50.38 54.2345V58.5172H1V54.2345H50.38ZM25.2232 49.3682L8.0665 32.2372H19.5871V1H31.4503V32.2372H42.3809L25.2232 49.3682Z"
                                         fill="white" stroke="#3B4A3C" />
@@ -483,7 +492,7 @@
         </div>
 
     </section>
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-top-side">
