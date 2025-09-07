@@ -417,3 +417,134 @@ swiperContainers.forEach((container, index) => {
     swiper.autoplay.start();
   });
 });
+let menuOpen = false;
+
+        // Toggle menu function
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            const overlay = document.getElementById('overlay');
+            
+            menuOpen = !menuOpen;
+            
+            if (menuOpen) {
+                sideMenu.classList.add('open');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                sideMenu.classList.remove('open');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close menu function
+        function closeMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            const overlay = document.getElementById('overlay');
+            
+            menuOpen = false;
+            sideMenu.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Set active link (desktop)
+        function setActive(element) {
+            // Remove active from all desktop links
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active to clicked link
+            element.classList.add('active');
+            
+            // Sync with side menu
+            const href = element.getAttribute('href');
+            document.querySelectorAll('.side-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            const sideLink = document.querySelector(`.side-nav-link[href="${href}"]`);
+            if (sideLink) {
+                sideLink.classList.add('active');
+            }
+            
+            // Smooth scroll
+            scrollToSection(href);
+        }
+
+        // Navigate and close (side menu)
+        function navigateAndClose(element) {
+            // Remove active from all side links
+            document.querySelectorAll('.side-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active to clicked link
+            element.classList.add('active');
+            
+            // Sync with desktop menu
+            const href = element.getAttribute('href');
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            const desktopLink = document.querySelector(`.navbar-nav .nav-link[href="${href}"]`);
+            if (desktopLink) {
+                desktopLink.classList.add('active');
+            }
+            
+            // Close menu and scroll
+            closeMenu();
+            setTimeout(() => scrollToSection(href), 300);
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(href) {
+            const target = document.querySelector(href);
+            if (target) {
+                const offset = 100;
+                const targetPosition = target.offsetTop - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && menuOpen) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when window is resized to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 992 && menuOpen) {
+                closeMenu();
+            }
+        });
+
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 150;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    // Update both desktop and side menu
+                    document.querySelectorAll('.nav-link, .side-nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    const activeLinks = document.querySelectorAll(`[href="#${sectionId}"]`);
+                    activeLinks.forEach(link => {
+                        link.classList.add('active');
+                    });
+                }
+            });
+        });

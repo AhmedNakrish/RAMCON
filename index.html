@@ -20,15 +20,26 @@
 </head>
 
 <body>
-    <!-- اللغات + النقاط -->
-    <div class="container lang-btns">
-        <a class="lang-btn" href="#">EN</a>
-        <a class="lang-btn" href="#">AR</a>
-        <div class="dots ms-2">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span>
+    <div class="mobile-navs">
+        <div class="phone-btn">
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+       
+        <!-- اللغات + النقاط -->
+        <div class="container lang-btns">
+            <a class="lang-btn" href="#">EN</a>
+            <a class="lang-btn" href="#">AR</a>
+            <div class="dots ms-2">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </div>
+           
         </div>
     </div>
+    
+    
     <nav class="navbar navbar-expand-lg container">
         <div class="container-fluid d-flex justify-content-between align-items-center">
 
@@ -56,9 +67,60 @@
 
 
         </div>
+        
     </nav>
     <!--sidebar nav-->
-    
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <!-- Header -->
+        <div class="side-menu-header">
+            <button class="close-btn" onclick="closeMenu()">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="menu-logo">RMCON</div>
+            
+        </div>
+
+        <!-- Search -->
+        <div class="side-menu-search">
+            <form class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </form>
+        </div>
+
+        <!-- Navigation -->
+        <div class="side-menu-nav">
+            <div class="side-nav-item">
+                <a href="#hero-section" class="side-nav-link active" onclick="navigateAndClose(this)">
+                    <i class="fa fa-home side-nav-icon"></i>
+                    <span>HOME</span>
+                </a>
+            </div>
+            <div class="side-nav-item">
+                <a href="#aboutus-section" class="side-nav-link" onclick="navigateAndClose(this)">
+                    <i class="fa fa-info-circle side-nav-icon"></i>
+                    <span>ABOUT US</span>
+                </a>
+            </div>
+            <div class="side-nav-item">
+                <a href="#services-section" class="side-nav-link" onclick="navigateAndClose(this)">
+                    <i class="fa fa-cogs side-nav-icon"></i>
+                    <span>SERVICES</span>
+                </a>
+            </div>
+            <div class="side-nav-item">
+                <a href="#footer" class="side-nav-link" onclick="navigateAndClose(this)">
+                    <i class="fa fa-envelope side-nav-icon"></i>
+                    <span>CONTACT</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    <!-- Side Menu -->
     <section class="hero-section " ld="hero-section">
         <img class="circles" src="./assets/images/circles.png" alt="">
         <div class="container">
@@ -174,13 +236,13 @@
 
                             <!-- Execution -->
                             <div class="Execution services-card">
-                                <svg class="curved-text" width="300" height="100" ">
-                                <defs>
-                                    <path id=" execution-curve" d="M 50,100 Q 200,20 250,120"></path>
+                                <svg class="curved-text" width="300" height="100">
+                                    <defs>
+                                        <path id="execution-curve" d="M 50,100 Q 200,20 250,120" />
                                     </defs>
                                     <text class="serv-name-curved">
-                                        <textPath href="#execution-curve" startOffset="50%" text-anchor="middle">
-                                            Execution
+                                        <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
+                                           Execution
                                         </textPath>
                                     </text>
                                 </svg>
@@ -193,13 +255,13 @@
 
                             <!-- Delivery -->
                             <div class="Delivery-to-customer services-card">
-                                <svg class="curved-text" width="400" height="70" ">
-                                <defs>
-                                    <path id=" delivery-curve" d="M 50,50 Q 200,20 350,50"></path>
+                                <svg class="curved-text" width="300" height="100">
+                                    <defs>
+                                        <path id="delivery-curve" d="M 50,100 Q 200,20 250,120" />
                                     </defs>
                                     <text class="serv-name-curved">
-                                        <textPath href="#delivery-curve" startOffset="50%" text-anchor="middle">
-                                            Delivery to Customer
+                                        <textPath href="#planning-curve" startOffset="50%" text-anchor="middle">
+                                           Delivery to Customer
                                         </textPath>
                                     </text>
                                 </svg>
@@ -403,35 +465,7 @@
         </div>
         <div class="container">
             <div class="our-clients">
-                <!-- High Side Swiper -->
-                <!--div class="swiper high-side">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./assets/images/image 3 (1).png" alt="Client 1" class="client-logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/image 5.png" alt="Client 2" class="client-logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/image 7.png" alt="Client 3" class="client-logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/image 8.png" alt="Client 4" class="client-logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/image 9.png" alt="Client 5" class="client-logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/image 9.png" alt="Client 6" class="client-logo">
-                        </div>
-                    </div>
-                    <!-- Navigation buttons -->
-                    <!-div class="swiper-button-next"></!-div>
-                    <!--div class="swiper-button-prev"></!--div-->
-                    <!-- Pagination -->
-                    <!--div class="swiper-pagination"></!--div-->
-                <!--/div-->
-
+                
                 <div class="swiper bottom-side">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
